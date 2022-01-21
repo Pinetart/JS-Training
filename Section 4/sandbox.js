@@ -1,5 +1,9 @@
-let dogFunction = function(name1 = 'Zane', name2 = 'Birkett'){
-return(`${name1} ${name2}`);
+// Regular Function
+const calcArea = function(radius){
+    return 3.14 * radius**2;
 }
 
-console.log(dogFunction('Sean', 'Connery'));
+// Arrow Function
+const calcArea = (radius) => {
+    return 3.14 * radius ** 2;
+}
