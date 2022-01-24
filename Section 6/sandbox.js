@@ -1,31 +1,11 @@
-// const content = document.querySelector('p');
-// content.className = 'success';
+const article = document.querySelector('article')
+const title = document.querySelector('h2')
+// console.log(article)
 
-// console.log(content.classList);
-// content.classList.add('success');
 
-// My way
-// const paras = document.querySelectorAll('p')
-// paras.forEach(
-//     para => {
-//         if(para.innerText.includes('error')){
-//             para.classList.add('error');
-//         }else if(para.innerText.includes('success')){
-//             para.classList.add('success');
-//         }
-//     }
-// )
+// Array.from(article.children).forEach(child => {
+//    child.classList.add('article-element') 
+// });
 
-const paras = document.querySelectorAll("p");
-paras.forEach(para => {
-  if (para.textContent.includes('error')) {
-    para.classList.add("error");
-  }
-  if (para.textContent.includes('success')) {
-    para.classList.add("success");
-  }
-});
-
-const title = document.querySelector('.title');
-title.classList.toggle('test');
-title.classList.toggle('test');
+console.log(title.parentElement.parentElement)
+console.log(title.nextElementSibling)
