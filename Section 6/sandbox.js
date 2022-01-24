@@ -1,11 +1,15 @@
-const article = document.querySelector('article')
-const title = document.querySelector('h2')
-// console.log(article)
+const button = document.querySelector('button')
 
+button.addEventListener('click',() =>{
+    console.log('You clicked me')
+})
 
-// Array.from(article.children).forEach(child => {
-//    child.classList.add('article-element') 
-// });
-
-console.log(title.parentElement.parentElement)
-console.log(title.nextElementSibling)
+const listNodes = document.querySelectorAll('li');
+listNodes.forEach(node => {
+    node.addEventListener('click', () => {
+    // console.log('item clicked')
+    // console.log(e.target)
+    // console.log(node)
+    node.style.textDecoration = 'line-through';
+})
+})
