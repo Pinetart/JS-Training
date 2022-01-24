@@ -1,9 +1,10 @@
-const content = document.querySelector('#content')
-console.log(content)
-const people = [{name:'Zane', title: 'Birkett'}, {name: 'John', title: 'Smith'}]
+const link = document.querySelector('a');
+console.log(link.getAttribute('href'));
 
-people.forEach(
-    person => {
-        content.innerHTML += `<h1>${person.name} ${person.title}</h1>`
-    }
-)
+link.setAttribute('href', 'thenetninja.co.uk');
+console.log(link.getAttribute("href"));
+
+const mssg = document.querySelector('p');
+console.log(mssg.getAttribute('class'))
+mssg.setAttribute('class','success')
+mssg.setAttribute('style', 'color:green;');
