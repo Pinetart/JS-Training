@@ -1,9 +1,20 @@
-// Regular Function
-const calcArea = function(radius){
-    return 3.14 * radius**2;
-}
+// const myFunc = (callbackFunc) => {
+//     let value = 50;
+//     callbackFunc(value)
+// }
 
-// Arrow Function
-const calcArea = (radius) => {
-    return 3.14 * radius ** 2;
+// myFunc(value => {
+//         console.log(value)
+//     }
+// )
+
+let people = ['zane', 'marc', 'john', 'michael',]
+
+const logPerson = (person, index) => {
+    console.log(`${index} - hello ${person}`)
 }
+// people.forEach(person => {
+//     console.log(person)
+// })
+ 
+people.forEach(logPerson)
