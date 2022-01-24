@@ -6,17 +6,17 @@ let user = {
   email: "zane.birkett@caricom.org",
   location: "Guyana",
   blogs: ["Dog are better than cats", "Guyana is great"],
-  login: () => {
+  login(){
     console.log("the user is logged in");
   },
-  logout: () => {
+  logout(){
     console.log("the user is logged out");
   },
-  logBlogs: () => {
-      
+  logBlogs(){
+    console.log('The user has written the following blogs:')
+    this.blogs.forEach(blog => console.log(blog));
   }
 };
 
-user.login();
-user.logout();
-
+// console.log(this)
+user.logBlogs();
