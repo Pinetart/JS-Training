@@ -18,6 +18,12 @@ addForm.addEventListener("submit", (e) => {
 
   if (todo.length > 0) {
     generateTemplate(todo);
-    addForm.reset()
+    addForm.reset();
+  }
+});
+
+list.addEventListener("click", (e) => {
+  if (e.target.classList.contains("delete")) {
+    e.target.parentElement.remove();
   }
 });
