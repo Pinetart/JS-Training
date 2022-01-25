@@ -1,20 +1,24 @@
-const scores = [10, 30, 15, 25, 50, 40, 5];
-// const filteredScores = scores.filter((score) => {
-//   return score > 20;
-// });
+const prices = [20, 10, 30, 25, 15, 40, 80, 6];
 
-// console.log(filteredScores);
+// const salePrices = prices.map((price) => price / 2);
+// console.log(salePrices)
 
-const users = [
-  { name: "shaun", premium: true },
-  { name: "yoshi", premium: false },
-  { name: "mario", premium: false },
-  { name: "chun-li", premium: true },
+const products = [
+  { name: "gold star", price: 20 },
+  { name: "mushroom", price: 40 },
+  { name: "green shells", price: 30 },
+  { name: "banana skin", price: 10 },
+  { name: "red shells", price: 50 },
 ];
 
-// users.forEach((user, index) => {
-//   console.log(user.name, index);
-// });
-const premiumUsers = users.filter((user) => user.premium);
+const saleProducts = products.map((product) => {
+  if (product.price > 30) {
+    // product.price = product.price / 2;
+    // return product
+    return { name: product.name, price: product.price / 2 };
+  } else {
+    return product;
+  }
+});
 
-console.log(premiumUsers);
+console.log(saleProducts, products);
