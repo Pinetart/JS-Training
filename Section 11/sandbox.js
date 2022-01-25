@@ -1,17 +1,18 @@
-const now = new Date();
-const before = new Date("June 6 1998 8:30:40");
+const clock = document.querySelector(".clock");
 
-// console.log(now.getTime());
-// console.log(before.getTime())
+const tick = () => {
+  const now = new Date();
+  const h = now.getHours();
+  const m = now.getMinutes();
+  const s = now.getSeconds();
 
-const diff = now.getTime() - before.getTime();
-// console.log(diff)
+  const html = `
+    <span>${h}</span> :
+    <span>${m}</span> :
+    <span>${s}</span> 
+  `;
 
-const mins = Math.round(diff / 1000 / 60);
-const hours = Math.round(mins / 60);
-const days = Math.round(hours / 24);
-const years = Math.round(days / 365);
-console.log(before.getTime());
+  clock.innerHTML = html
+};
 
-const trying = new Date(897136240000);
-// console.log(trying.getHours())
+setInterval(tick, 1000);
