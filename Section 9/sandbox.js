@@ -1,30 +1,18 @@
-const names = ["mario", "shaun", "chun-li", "yoshi", "luigi"];
-const scores = [10, 20, 30, 40, 50];
-
-// names.sort();
-// console.log(names)
-
-// names.reverse();
-// console.log(names)
-
-const players = [
-  { name: "mario", score: 20 },
-  { name: "luigi", score: 10 },
-  { name: "chun-li", score: 50 },
-  { name: "yoshi", score: 30 },
-  { name: "shaun", score: 70 },
+const products = [
+  { name: "gold star", price: 30 },
+  { name: "green shell", price: 10 },
+  { name: "red shell", price: 40 },
+  { name: "banana skin", price: 5 },
+  { name: "mushroom", price: 50 },
 ];
 
-// players.sort((a, b) => {
-//   if (a.score > b.score) {
-//     return -1;
-//   } else if (b.score > a.score) {
-//     return 1;
-//   } else {
-//     0;
-//   }
-// });
+// const filtered = products.filter((product) => product.price > 20);
+// const promos = filtered.map(
+//   (product) => `the ${product.name} is ${product.price / 2}`
+// );
 
-players.sort((a, b) => b.score - a.score);
+const promos = products
+  .filter((product) => product.price > 20)
+  .map((product) => `the ${product.name} is ${product.price / 2}`);
 
-console.log(players);
+console.log(promos);
