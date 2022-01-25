@@ -20,6 +20,24 @@ form.addEventListener("submit", (e) => {
     }
   });
   result.classList.remove("d-none");
-  result.querySelector("span").textContent = `${score}%`;
   scrollTo({ top: 0, left: 0, behavior: "smooth" });
+
+  let output = 0;
+  const timer = setInterval(() => {
+    result.querySelector("span").textContent = `${output}%`;
+    if (output === score) {
+      clearInterval(timer);
+    } else {
+      output++;
+    }
+  }, 50);
+
+  //   let i = 0;
+  //   const timer = setInterval(() => {
+  //     console.log("hello");
+  //     i++;
+  //     if (i === 5) {
+  //       clearInterval(timer);
+  //     }
+  //   }, 1000);
 });
