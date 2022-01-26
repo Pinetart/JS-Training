@@ -17,8 +17,17 @@
 // console.log(getTodos());
 
 const getShort = async (resource) => {
+  const response = await fetch(resource);
+  if (response.status !== 200) {
+    throw new Error("Cannot fetch data");
+  }
+
   const information = await (await fetch(resource)).json();
   return information;
 };
 
-getShort("todos/luigi.json").then((data) => console.log("resolved:", data));
+getShort("todos/luigsi.json")
+  .then((data) => console.log("resolved:", data))
+  .catch((err) => {
+    console.log("rejected: ", err.message);
+  });
