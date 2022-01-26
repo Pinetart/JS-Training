@@ -22,13 +22,13 @@ const getCity = async (city) => {
   return data[0];
 };
 
-getCity("georgetown")
-  .then((data) => {
-    return getWeather(data.Key);
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
+// getCity("georgetown")
+//   .then((data) => {
+//     return getWeather(data.Key);
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.log(err.message);
+//   });
