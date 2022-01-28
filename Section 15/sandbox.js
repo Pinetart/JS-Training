@@ -1,27 +1,9 @@
-const userOne = {
-  username: "ryu",
-  email: "ryu@thenetninja.co.uk",
-  login() {
-    console.log(`${this.username} logged in`);
-  },
-  logout() {
-    console.log(`${this.username} logged out`);
-  },
-};
+class User {
+  constructor(username, email){
+    this.username = username
+    this.email = email
+  }
+}
 
-console.log(userOne.username, userOne.email);
-userOne.login();
-
-const userTwo = {
-  username: "chun li",
-  email: "chun.li@thenetninja.co.uk",
-  login() {
-    console.log(`${this.username} logged in`);
-  },
-  logout() {
-    console.log(`${this.username} logged out`);
-  },
-};
-
-console.log(userTwo.username, userTwo.email);
-userTwo.login();
+const test = new User('zane','zanebirkett@icloud.com')
+console.log(test)
