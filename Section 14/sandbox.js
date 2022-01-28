@@ -5,6 +5,12 @@
 // let age = localStorage.getItem("age");
 // console.log(name, age);
 
-localStorage.setItem('key','XBOA!@)!OSAX')
-let keyString = localStorage.getItem('key')
+localStorage.setItem("key", "XBOA!@)!OSAX");
+let keyString = localStorage.getItem("key");
+
 console.log(keyString)
+localStorage.clear();
+
+keyString = localStorage.getItem("key");
+
+console.log(keyString);
