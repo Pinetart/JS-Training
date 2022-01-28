@@ -1,16 +1,13 @@
-// localStorage.setItem("name", "Mario");
-// localStorage.setItem("age", 50);
+const todos = [
+  { text: "play mariokart", author: "shaun" },
+  { text: "buy some milk", author: "mario" },
+  { text: "buy some bread", author: "luigi" },
+];
 
-// let name = localStorage.getItem("name");
-// let age = localStorage.getItem("age");
-// console.log(name, age);
+console.log(JSON.stringify(todos));
 
-localStorage.setItem("key", "XBOA!@)!OSAX");
-let keyString = localStorage.getItem("key");
+localStorage.setItem("todos", JSON.stringify(todos));
 
-console.log(keyString)
-localStorage.clear();
+const stored = localStorage.getItem('todos')
 
-keyString = localStorage.getItem("key");
-
-console.log(keyString);
+console.log(JSON.parse(stored))
