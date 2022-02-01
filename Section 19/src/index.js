@@ -1,6 +1,6 @@
 import { styleBody, addTitle, contact } from "./dom";
+import users, { getPremUsers } from "./data";
 
-console.log("index file");
-addTitle("Hello");
-styleBody()
-console.log(contact)
+let premUsers = getPremUsers(users);
+console.log(users);
+console.log(premUsers);
