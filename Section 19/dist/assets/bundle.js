@@ -1,1 +1,1 @@
-(()=>{const o=o=>{console.log(`Hello ${o}`)};o("mario"),o("luigi"),o("dogma"),o("dogma")})();
+(()=>{"use strict";console.log("dom file");const e=document.querySelector("body"),o=()=>{e.style.background="peachpuff"},l=o=>{const l=document.createElement("h1");l.textContent=o,e.appendChild(l)};o(),l("Hello World, from the dom file"),console.log("index file"),l("Hello"),o(),console.log("mario@thenetninja.co.uk")})();
