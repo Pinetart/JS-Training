@@ -1,21 +1,27 @@
-// Rest Parameter
-const double = (...nums) => {
-  console.log(nums);
-  return nums.map((num) => num * 2);
-};
-const result = double(1, 3, 5, 7, 9, 2, 4, 6, 8);
-console.log(result);
+// sets
+const namesArray = ["shaun", "ryu", "crystal", "ryu"];
+console.log(namesArray);
 
-// spread syntax
-const people = ["shaun", "ryu", "crystal"];
-const members = ["mario", "chun li", ...people];
-console.log(members);
+// const namesSet = new Set(namesArray)
+// console.log(namesSet)
 
-const person = {
-  name: "shaun",
-  age: 30,
-  job: "Net Ninja",
-};
+const uniqueNames = [...new Set(namesArray)];
+console.log(uniqueNames);
 
-const personClone ={...person};
-console.log(personClone)
+const ages = new Set();
+ages.add(20).add(25);
+ages.delete(25);
+console.log(ages, ages.size);
+console.log(ages.has(30));
+ages.clear();
+console.log(ages);
+
+const ninjas = new Set([
+  { name: "shaun", age: 30 },
+  { name: "crystal", age: 29 },
+  { name: "chun-li", age: 32 },
+]);
+
+ninjas.forEach(ninja => {
+    console.log(ninja.name,ninja.age)
+})
